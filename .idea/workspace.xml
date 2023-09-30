@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81646f40-7c48-441b-8124-2d8d2d07ee2a" name="Changes" comment="Question 3 is ready.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lab1/q4/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lab1/q6/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lab1/q4/CarTest.java" afterDir="false" />
+    <list default="true" id="81646f40-7c48-441b-8124-2d8d2d07ee2a" name="Changes" comment="Starting question 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab1/q3/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/q3/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lab1/q3/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lab1/q3/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab1/q6/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/q6/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695920678476</updated>
-      <workItem from="1695920679624" duration="11410000" />
+      <workItem from="1695920679624" duration="16007000" />
     </task>
     <task id="LOCAL-00001" summary="Question 3 is ready.">
       <option name="closed" value="true" />
@@ -162,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695936159476</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Starting question 6">
+      <option name="closed" value="true" />
+      <created>1696077083165</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696077083165</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Question 3 is ready." />
-    <option name="LAST_COMMIT_MESSAGE" value="Question 3 is ready." />
+    <MESSAGE value="Starting question 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting question 6" />
   </component>
 </project>
