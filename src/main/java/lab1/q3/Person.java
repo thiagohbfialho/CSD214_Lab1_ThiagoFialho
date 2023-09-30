@@ -1,5 +1,6 @@
 package lab1.q3;
 
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 /**
@@ -10,23 +11,22 @@ import java.util.Objects;
 
 public class Person {
 
-    enum gend {
+    public static enum Gender{
         M,
         F
-    }
-
+    };
 
     //Attributes of a person
     //Defined as instance variables
     private String firstname;
     private String lastname;
-    private gend gender;
+    private Gender gender;
     private int SIN;
 
     //Defined as class variable
     private static int COUNT;
 
-    public Person(String firstname, String lastname, Person.gend gender, int SIN) {
+    public Person(String firstname, String lastname, Person.Gender gender, int SIN) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
@@ -72,11 +72,11 @@ public class Person {
         this.lastname = lastname;
     }
 
-    public gend getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(gend gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -115,7 +115,14 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person p = new Person("Thiago","Fialho", Person.gend.F, 123);
+        Person p1 =new Person("First", "Last", Person.Gender.M, 1234);
+        Person p2 =new Person("First", "Last", Person.Gender.M, 1234);
+
+        if(p1==p2){
+            System.out.println("equal");
+        }else {
+            System.out.println("not equal");
+        }
     }
 
 }
