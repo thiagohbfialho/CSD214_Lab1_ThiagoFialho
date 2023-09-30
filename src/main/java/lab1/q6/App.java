@@ -101,35 +101,75 @@ public class App {
         return list;
     }
 
+    private void addNewCar(App app) {
+        Scanner input = new Scanner(System.in); // reset the scanner
+
+        System.out.println("Enter Make:");
+        String make = input.nextLine();
+        //System.out.println("f");
+        System.out.println("Enter Model:");
+        String model = input.nextLine();
+        //System.out.println("b");
+        System.out.println("Enter Year:");
+        int year = input.nextInt();
+        //System.out.println("2");
+
+        Car car = new Car(make,model,year);
+        app.addCar(car);
+    }
+
+    private void editCar(App app) {
+        System.out.println(app.listUnsoldCars());
+        System.out.println("Which car would like to edit?");
+        int choice = app.getInput().nextInt();
+
+        Scanner input = new Scanner(System.in); // reset the scanner
+        if( choice > 0 && choice < app.getUnsoldCurrentIndex() + 1){
+            Car car = app.getUnsoldCars()[choice-1];
+            System.out.println("Make: "+car.getMake());
+            car.setMake(input.nextLine());
+            System.out.println("Model: "+car.getModel());
+            car.setModel(input.nextLine());
+            System.out.println("Year: "+car.getYear());
+            car.setYear(input.nextInt());
+        }else{
+            System.out.println("Choice out of bounds!");
+        }
+    }
+
+    private void deleteCar(App app) {
+    }
+
     public static void main(String[] args) {
 
         int selection = 0;
+        boolean running = true;
 
         App app = new App();
-        while(selection!=99){
+        while(running){
             System.out.println(app.getMenu());
             selection = app.input.nextInt();
 
-            if(selection==1){
-
-                Scanner input = new Scanner(System.in); // reset the scanner
-
-                System.out.println("Enter Make:");
-                String make = input.nextLine();
-                //System.out.println("f");
-                System.out.println("Enter Model:");
-                String model = input.nextLine();
-                //System.out.println("b");
-                System.out.println("Enter Year:");
-                int year = input.nextInt();
-                //System.out.println("2");
-
-                Car car = new Car(make,model,year);
-                app.addCar(car);
-
-                //System.out.println(app.listUnsoldCars());
+            if((selection > 0 && selection < 8) || selection == 99){
+                switch (selection){
+                    case 1:
+                        app.addNewCar(app);
+                        break;
+                    case 2:
+                        app.editCar(app);
+                        break;
+                    case 3:
+                        app.deleteCar(app);
+                        break;
+                    case 5:
+                        System.out.println(app.listUnsoldCars());
+                        break;
+                    case 99:
+                        System.out.println("Good bye!");
+                        running = false;
+                        break;
+                }
             }
-
         }
     }
 
