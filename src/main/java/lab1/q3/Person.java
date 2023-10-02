@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class Person {
 
+    //Variable to choose gender
     public static enum Gender{
         M,
         F
@@ -26,6 +27,13 @@ public class Person {
     //Defined as class variable
     private static int COUNT;
 
+    /**
+     * Constuctor of Person class with those parameters below
+     * @param firstname
+     * @param lastname
+     * @param gender
+     * @param SIN
+     */
     public Person(String firstname, String lastname, Person.Gender gender, int SIN) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -34,6 +42,12 @@ public class Person {
         COUNT++;
     }
 
+    /**
+     * Constuctor of Person class with those parameters below
+     * @param firstname
+     * @param lastname
+     * @param SIN
+     */
     public Person(String firstname, String lastname, int SIN) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -41,12 +55,21 @@ public class Person {
         COUNT++;
     }
 
+    /**
+     * Constuctor of Person class with those parameters below
+     * @param firstname
+     * @param lastname
+     */
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
         COUNT++;
     }
 
+    /**
+     * Method that put all instance variable in a String
+     * @return a string with all instance variable
+     */
     @Override
     public String toString() {
         return "Person{" +
@@ -56,46 +79,91 @@ public class Person {
                 '}';
     }
 
+    /**
+     * Method to return First Name
+     * @return First name
+     */
     public String getFirstname() {
         return firstname;
     }
 
+    /**
+     * Method toedit the First Name
+     * @param firstname
+     */
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
+    /**
+     * Method to return Last Name
+     * @return Last Name
+     */
     public String getLastname() {
         return lastname;
     }
 
+    /**
+     * Method to edit the Last Name
+     * @param lastname
+     */
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
+    /**
+     * Method to return Gender
+     * @return Gender
+     */
     public Gender getGender() {
         return gender;
     }
 
+    /**
+     * Method to edit gender
+     * @param gender
+     */
     public void setGender(Gender gender) {
         this.gender = gender;
     }
 
+    /**
+     * Method to return SIN
+     * @return SIN
+     */
     public int getSIN() {
         return SIN;
     }
 
+    /**
+     * Method to edit SIN
+     * @param SIN
+     */
     public void setSIN(int SIN) {
         this.SIN = SIN;
     }
 
+    /**
+     * Method to return how many Persons were created
+     * @return COUNT
+     */
     public static int getCOUNT() {
         return COUNT;
     }
 
+    /**
+     * Method to edit how many Person were created
+     * @param COUNT
+     */
     public static void setCOUNT(int COUNT) {
         Person.COUNT = COUNT;
     }
 
+    /**
+     * Method to know if two persons are the same
+     * @param o
+     * @return true/false
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -103,6 +171,10 @@ public class Person {
         return getSIN() == person.getSIN() && Objects.equals(getFirstname(), person.getFirstname()) && Objects.equals(getLastname(), person.getLastname()) && getGender() == person.getGender();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(getFirstname(), getLastname(), getGender(), getSIN());
@@ -115,14 +187,14 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person p1 =new Person("First", "Last", Person.Gender.M, 1234);
-        Person p2 =new Person("First", "Last", Person.Gender.M, 1234);
-
-        if(p1==p2){
-            System.out.println("equal");
-        }else {
-            System.out.println("not equal");
-        }
+//        Person p1 =new Person("First", "Last", Person.Gender.M, 1234);
+//        Person p2 =new Person("First", "Last", Person.Gender.M, 1234);
+//
+//        if(p1==p2){
+//            System.out.println("equal");
+//        }else {
+//            System.out.println("not equal");
+//        }
     }
 
 }

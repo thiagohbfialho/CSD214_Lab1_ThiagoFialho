@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81646f40-7c48-441b-8124-2d8d2d07ee2a" name="Changes" comment="Implemented edit unsold car and list cars.">
+    <list default="true" id="81646f40-7c48-441b-8124-2d8d2d07ee2a" name="Changes" comment="Finalized all application.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab1/q3/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/q3/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab1/q4/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/q4/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lab1/q6/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/q6/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab1/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +45,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/thiagofialho/IdeaProjects/CSD_214/src/main/java/lab1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,7 +62,7 @@
       <recent name="lab1.q3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Person">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab1.q6.App" />
       <module name="CSD_214" />
@@ -71,12 +76,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CSD_214" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Person" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab1.q3.Person" />
       <module name="CSD_214" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lab1.q3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lab1.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lab1.Main" />
+      <module name="CSD_214" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lab1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,43 +131,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.decrementPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CSD_214" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lab1.q3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lab1.q3" />
-      <option name="MAIN_CLASS_NAME" value="lab1.q3.PersonTest" />
-      <option name="METHOD_NAME" value="decrementPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="lab1.q3 in CSD_214" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CSD_214" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lab1.q3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lab1.q3" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.Person" />
+        <item itemvalue="Application.lab1.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.CarTest.testEqualsCarPerson" />
-        <item itemvalue="JUnit.PersonTest.decrementPerson" />
-        <item itemvalue="JUnit.lab1.q3 in CSD_214" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +150,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695920678476</updated>
       <workItem from="1695920679624" duration="19086000" />
-      <workItem from="1696165570126" duration="11886000" />
+      <workItem from="1696165570126" duration="14717000" />
+      <workItem from="1696283380544" duration="3032000" />
     </task>
     <task id="LOCAL-00001" summary="Question 3 is ready.">
       <option name="closed" value="true" />
@@ -183,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696085455088</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finalized all application.">
+      <option name="closed" value="true" />
+      <created>1696217499069</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696217499069</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +204,7 @@
     <MESSAGE value="Starting question 6" />
     <MESSAGE value="Finalized Create Car" />
     <MESSAGE value="Implemented edit unsold car and list cars." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented edit unsold car and list cars." />
+    <MESSAGE value="Finalized all application." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalized all application." />
   </component>
 </project>

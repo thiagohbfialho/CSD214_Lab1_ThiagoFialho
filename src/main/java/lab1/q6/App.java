@@ -5,6 +5,17 @@ import lab1.q4.Car;
 
 import java.util.Scanner;
 
+/**
+ * @author thiagofialho
+ * Date: 09-30-23
+ * Description: This is a class for the App, this class allows a user
+ * to add, edit and delete a car in an unsold list
+ * The user can sell a car that was in an unsold list.
+ * After sell a car, a user can delete this car.
+ * The user can also see all cars in the unsold list and sold list.
+ **/
+
+
 public class App {
 
     private final int numCars = 100;
@@ -110,6 +121,9 @@ public class App {
         return listCars;
     }
 
+    /**
+    * In this method the user can input information about a new car
+     */
     private void addNewCar() {
         Scanner input = new Scanner(System.in); // reset the scanner
 
@@ -127,6 +141,9 @@ public class App {
         this.addCar(car);
     }
 
+    /**
+     * In this method the user can input information and edit a car
+     */
     private void editCar() {
         int choice = getChoice(this.getUnsoldCars(), this.getUnsoldCurrentIndex(),"Which car would like to edit?");
 
@@ -144,6 +161,9 @@ public class App {
         }
     }
 
+    /**
+     * In this method the user can choose which car he wants to edit
+     */
     private int getChoice(Car[] list, int currentIndex,  String question) {
         System.out.println(this.getListCars(currentIndex, list));
         System.out.println(question);
@@ -151,6 +171,9 @@ public class App {
         return choice;
     }
 
+    /**
+     * This method delete a car from a list and return a new list with that car
+     */
     private Car[] deleteCar(Car[] list, int indexDelete, int currentIndex){
         Car[] newListCars = new Car[this.getNumCars()];
         int newIndex = 0;
@@ -163,6 +186,9 @@ public class App {
         return newListCars;
     }
 
+    /**
+     * In this method the user can sell a car
+     */
     private void sellCar(Car[] unsoldCars, int unsoldCurrentIndex) {
         int choice = getChoice(this.getUnsoldCars(), this.getUnsoldCurrentIndex(),"Which car would like to sell?");
 
@@ -189,6 +215,9 @@ public class App {
         }
     }
 
+    /**
+     * In this method the user can delete an unsold car
+     */
     private void deleteUnsoldCar() {
         int unsoldCurrentIndex = this.getUnsoldCurrentIndex();
         Car[] unsoldCars = this.getUnsoldCars();
@@ -207,6 +236,9 @@ public class App {
         }
     }
 
+    /**
+     * In this method the user can delete a sold car
+     */
     private void deleteSoldCar() {
         int soldCurrentIndex = this.getSoldCurrentIndex();
         Car[] soldCars = this.getSoldCars();
@@ -225,7 +257,10 @@ public class App {
         }
     }
 
-    public static void main(String[] args) {
+    /**
+     * In this method the user can run the app.
+     */
+    public void run() {
 
         int selection = 0;
         boolean running = true;
